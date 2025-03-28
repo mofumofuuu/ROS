@@ -61,6 +61,14 @@ void Error_Handler(void);
 #define EN3_GPIO_Port GPIOC
 #define DIR3_Pin GPIO_PIN_5
 #define DIR3_GPIO_Port GPIOC
+#define EN2_Pin GPIO_PIN_13
+#define EN2_GPIO_Port GPIOB
+#define DIR2_Pin GPIO_PIN_15
+#define DIR2_GPIO_Port GPIOB
+#define SCL_Pin GPIO_PIN_6
+#define SCL_GPIO_Port GPIOB
+#define SDA_Pin GPIO_PIN_7
+#define SDA_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

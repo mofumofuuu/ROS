@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"roshal\startup_stm32f103xe.o"
+"roshal\main.o"
+"roshal\gpio.o"
+"roshal\tim.o"
+"roshal\stm32f1xx_it.o"
+"roshal\stm32f1xx_hal_msp.o"
+"roshal\stm32f1xx_hal_gpio_ex.o"
+"roshal\stm32f1xx_hal_tim.o"
+"roshal\stm32f1xx_hal_tim_ex.o"
+"roshal\stm32f1xx_hal.o"
+"roshal\stm32f1xx_hal_rcc.o"
+"roshal\stm32f1xx_hal_rcc_ex.o"
+"roshal\stm32f1xx_hal_gpio.o"
+"roshal\stm32f1xx_hal_dma.o"
+"roshal\stm32f1xx_hal_cortex.o"
+"roshal\stm32f1xx_hal_pwr.o"
+"roshal\stm32f1xx_hal_flash.o"
+"roshal\stm32f1xx_hal_flash_ex.o"
+"roshal\stm32f1xx_hal_exti.o"
+"roshal\system_stm32f1xx.o"
+"roshal\h_tmc2209.o"
+"roshal\h_oled.o"
+--strict --scatter "Roshal\Roshal.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Roshal.map" -o Roshal\Roshal.axf
