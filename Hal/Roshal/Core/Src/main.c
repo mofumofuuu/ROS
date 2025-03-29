@@ -106,7 +106,11 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {	
-		Motor2_Speed(39);
+		uint8_t speed=39;
+		Motor2_Speed(speed);
+		if(current_level==39) speed=0;
+
+		
 		OLED_ShowNum(1,1,current_level,3);
 		//Motor2_Speed(39);
     /* USER CODE END WHILE */
