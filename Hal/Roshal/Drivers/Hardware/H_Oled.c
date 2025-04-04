@@ -255,6 +255,35 @@ void OLED_ShowBinNum(uint8_t Line, uint8_t Column, uint32_t Number, uint8_t Leng
 }
 
 /**
+  * @brief  OLED显示浮点数
+  * @param  Line 起始行位置，范围：1~4
+  * @param  Column 起始列位置，范围：1~16
+  * @param  Number 要显示的数字，支持负数
+  * @param  IntegerLength 整数部分长度，范围：1~10
+  * @param  DecimalLength 小数部分长度，范围：1~10
+  * @retval 无
+  */
+void OLED_ShowFloat(uint8_t Line, uint8_t Column, float Number, uint8_t IntegerLength, uint8_t DecimalLength)
+{
+    int32_t integerPart = (int32_t)Number;                      // 提取整数部分
+    float decimalPart = Number - integerPart;                   // 提取小数部分
+    uint32_t decimalScaled;
+
+    // 处理负数的小数部分符号
+    if (decimalPart < 0) decimalPart = -decimalPart;
+
+    // 显示整数部分（自动处理负号）
+    OLED_ShowSignedNum(Line, Column, integerPart, IntegerLength);
+
+    // 显示小数点
+    OLED_ShowChar(Line, Column + IntegerLength + 1, '.');       // +1为符号位预留
+
+    // 计算并显示小数部分
+    decimalScaled = (uint32_t)(decimalPart * OLED_Pow(10, DecimalLength) + 0.5f); // 四舍五入
+    OLED_ShowNum(Line, Column + IntegerLength + 2, decimalScaled, DecimalLength);  // +2跳过符号和小数点
+}
+
+/**
   * @brief  OLED初始化
   * @param  无
   * @retval 无

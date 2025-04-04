@@ -19,12 +19,14 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "tim.h"
+#include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "H_Tmc2209.h"
 #include "H_Oled.h"
+#include "Usart3.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -51,7 +53,8 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-
+volatile float global_angle = 0.0;
+volatile uint8_t new_data_received = 0;
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -91,28 +94,29 @@ int main(void)
   MX_TIM8_Init();
   MX_TIM2_Init();
   MX_TIM5_Init();
+  MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
 	OLED_Init();
-	
-	HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_2);
-	HAL_TIM_Base_Start_IT(&htim5);
-	
-	Motor2_Enable(ENABLE); 
-  Motor2_Direction(GPIO_PIN_SET);
-	Motor2_Speed(0);
+	Usart3_Init();
+//	HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_2);
+//	HAL_TIM_Base_Start_IT(&htim5);
+//	
+//	Motor2_Enable(ENABLE); 
+//  Motor2_Direction(GPIO_PIN_SET);
+//	Motor2_Speed(0);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {	
-		uint8_t speed=39;
-		Motor2_Speed(speed);
-		if(current_level==39) speed=0;
-
-		
-		OLED_ShowNum(1,1,current_level,3);
+//		uint8_t speed=39;
+//		Motor2_Speed(speed);
+//		if(current_level==39) speed=0;
+			OLED_ShowFloat(2,1,114.5141919,3,4);
+			OLED_ShowFloat(1,1,global_angle,3,2);
 		//Motor2_Speed(39);
+		
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

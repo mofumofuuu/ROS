@@ -3,6 +3,7 @@
 "roshal\main.o"
 "roshal\gpio.o"
 "roshal\tim.o"
+"roshal\usart.o"
 "roshal\stm32f1xx_it.o"
 "roshal\stm32f1xx_hal_msp.o"
 "roshal\stm32f1xx_hal_gpio_ex.o"
@@ -18,9 +19,11 @@
 "roshal\stm32f1xx_hal_flash.o"
 "roshal\stm32f1xx_hal_flash_ex.o"
 "roshal\stm32f1xx_hal_exti.o"
+"roshal\stm32f1xx_hal_uart.o"
 "roshal\system_stm32f1xx.o"
 "roshal\h_tmc2209.o"
 "roshal\h_oled.o"
+"roshal\usart3.o"
 --strict --scatter "Roshal\Roshal.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

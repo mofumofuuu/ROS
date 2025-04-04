@@ -28,6 +28,7 @@ roshal\h_tmc2209.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 roshal\h_tmc2209.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 roshal\h_tmc2209.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 roshal\h_tmc2209.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+roshal\h_tmc2209.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 roshal\h_tmc2209.o: ../Core/Inc/gpio.h
 roshal\h_tmc2209.o: D:\keil_v5\Core\ARM\ARMCC\Bin\..\include\math.h
 roshal\h_tmc2209.o: ..\Drivers\Hardware\H_Tmc2209.h
