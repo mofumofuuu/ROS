@@ -1,0 +1,5 @@
+<launch>
+	<arg name="ctrl_node" default="true"/>
+	<node pkg="turtlesim" type="turtlesim_node" name="turtle"/>  
+	<node pkg="turtlesim" type="turtle_teleop_key" name="turtle_ctrl" if="$(eval arg('ctrl_node') == true)"/>
+</launch>

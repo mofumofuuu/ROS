@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/ros/catkin_ws/install
+
+Name: lesson2_tf
+Description: Description of lesson2_tf
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
