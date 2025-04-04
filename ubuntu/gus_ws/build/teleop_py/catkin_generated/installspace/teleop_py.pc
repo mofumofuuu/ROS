@@ -1,8 +1,0 @@
-prefix=/home/ubuntu/ros/gus_ws/install
-
-Name: teleop_py
-Description: Description of teleop_py
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

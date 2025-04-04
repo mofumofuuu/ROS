@@ -1,5 +1,0 @@
-<launch>
-	<include file="$(find learn_launch)/launch/turtle_ctrl.launch"/>
-	<node pkg="learn_topic" type="turtle_pose_subscriber" name="turtle_pose" output="screen"/>  
-	
-</launch>

@@ -1,2 +1,0 @@
-teleop_twist_keyboard_cpp
--DCATKIN_DEVEL_PREFIX=/home/ubuntu/ros/teleop_twist_keyboard_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/ros/teleop_twist_keyboard_ws/install -G Unix Makefiles
