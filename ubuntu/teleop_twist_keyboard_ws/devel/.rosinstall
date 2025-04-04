@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/ubuntu/ros/teleop_twist_keyboard_ws/devel/setup.sh

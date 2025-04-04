@@ -1,0 +1,2 @@
+mycar
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu/ros/myrobot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/ros/myrobot_ws/install -G Unix Makefiles

@@ -1,0 +1,5 @@
+<launch>
+	<node pkg="turtlesim" type="turtlesim_node" name="turtle">
+		<rosparam file="$(find learn_launch)/param/background_rgb.yaml" command="load"/>
+	</node>  
+</launch>

@@ -1,0 +1,52 @@
+<robot name="my_robot">
+    <link name = "base_footprint">
+        <!-- 基点-->
+        <!-- 包括visual collision inertia-->
+        <!-- geometry origin material  geometry origin  origin mass inertial -->
+        <!--  表面几何   碰撞实际距离    颜色   碰撞体积  方向    惯性相关 --> 
+        <visual>
+        <geometry>
+            <!-- 设置圆和半径-->
+            <sphere radius="0.001"/>
+        </geometry>
+        </visual>
+        </link>
+    <link name = "base_link">
+        <visual>
+            <geometry>
+                <box size ="0.3 0.18 0.02" />
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+                <material name = "yellow">
+                <color rgba="0 1 1  0.8" />
+                </material>
+        </visual>
+      
+        </link>    
+    <joint name = "base_link2base_footprint" type="fixed">
+        <parent link = "base_footprint"/>
+        <child link= "base_link"/>
+        <origin xyz="0 0 0.06"/>
+
+    </joint>
+    <!-- 驱动轮子-->
+    <link name="a_wheel">
+
+    <visual>
+        <geometry>
+            <cylinder radius="0.04" length="0.035"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="1.5705 0 0"/>
+        <material name="gray">
+            <color rgba="0.6 0.6 0.6 1.0"/>
+        </material>
+    </visual>
+    </link>
+    <joint name = "a_wheel2base_link" type="continuous">
+        <parent link = "base_link"/>
+        <child link= "a_wheel"/>
+        <origin xyz="-0.1 0.11 -0.02"/>
+        <axis xyz="0 1 0" />
+
+    </joint>
+    </robot>

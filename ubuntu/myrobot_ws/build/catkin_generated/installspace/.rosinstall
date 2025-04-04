@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/ubuntu/ros/myrobot_ws/install/setup.sh
