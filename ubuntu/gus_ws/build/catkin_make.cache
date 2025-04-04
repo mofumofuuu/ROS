@@ -1,2 +1,0 @@
-teleop_py
--DCATKIN_DEVEL_PREFIX=/home/ubuntu/ros/gus_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/ros/gus_ws/install -G Unix Makefiles
