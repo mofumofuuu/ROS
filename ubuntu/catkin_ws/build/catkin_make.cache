@@ -1,0 +1,2 @@
+learning_communication:lesson2_homework/src/lesson2_tf
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu/ros/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/ros/catkin_ws/install -G Unix Makefiles
