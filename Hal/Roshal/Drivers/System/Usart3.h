@@ -1,7 +1,7 @@
 #ifndef __USART3_H__
 #define __USART3_H__
 
-#include <stdio.h>
+#include <stdint.h>
 
 //配置命令数组
 //解锁寄存器 FF AA 69 88 B5
@@ -12,7 +12,12 @@
 //重启 FF AA 00 FF 00
 //在上位机配置更简便
 
+//打开接收中断
 void Usart3_Init(void);
+//发送数组
+void Usart3_SendArray(uint8_t *array, uint16_t length);
+//获取角度数据
+float Usart_GetAngle(void);
 
 
 #endif

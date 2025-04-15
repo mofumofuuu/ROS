@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xE</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;../Drivers/Hardware;../Drivers/System</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;../Drivers/Hardware;../Drivers/System;..\Drivers\Function</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -794,6 +794,16 @@
               <FileType>5</FileType>
               <FilePath>..\Drivers\Hardware\H_Oled_Font.h</FilePath>
             </File>
+            <File>
+              <FileName>H_Hwt101.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\Hardware\H_Hwt101.c</FilePath>
+            </File>
+            <File>
+              <FileName>H_Hwt101.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Drivers\Hardware\H_Hwt101.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -808,6 +818,41 @@
               <FileName>Usart3.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\Drivers\System\Usart3.h</FilePath>
+            </File>
+            <File>
+              <FileName>Usart2.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\System\Usart2.c</FilePath>
+            </File>
+            <File>
+              <FileName>Usart2.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Drivers\System\Usart2.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Function</GroupName>
+          <Files>
+            <File>
+              <FileName>Conversation.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\Function\Conversation.c</FilePath>
+            </File>
+            <File>
+              <FileName>Conversation.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Drivers\Function\Conversation.h</FilePath>
+            </File>
+            <File>
+              <FileName>Move.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\Function\Move.c</FilePath>
+            </File>
+            <File>
+              <FileName>Move.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Drivers\Function\Move.h</FilePath>
             </File>
           </Files>
         </Group>

@@ -23,7 +23,11 @@
 "roshal\system_stm32f1xx.o"
 "roshal\h_tmc2209.o"
 "roshal\h_oled.o"
+"roshal\h_hwt101.o"
 "roshal\usart3.o"
+"roshal\usart2.o"
+"roshal\conversation.o"
+"roshal\move.o"
 --strict --scatter "Roshal\Roshal.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

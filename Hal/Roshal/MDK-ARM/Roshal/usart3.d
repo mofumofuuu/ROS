@@ -30,6 +30,5 @@ roshal\usart3.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 roshal\usart3.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 roshal\usart3.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 roshal\usart3.o: ..\Drivers\System\Usart3.h
-roshal\usart3.o: D:\keil_v5\Core\ARM\ARMCC\Bin\..\include\stdio.h
 roshal\usart3.o: D:\keil_v5\Core\ARM\ARMCC\Bin\..\include\stdarg.h
 roshal\usart3.o: D:\keil_v5\Core\ARM\ARMCC\Bin\..\include\string.h

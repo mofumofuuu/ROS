@@ -31,7 +31,7 @@ roshal\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 roshal\main.o: ../Core/Inc/tim.h
 roshal\main.o: ../Core/Inc/usart.h
 roshal\main.o: ../Core/Inc/gpio.h
-roshal\main.o: ../Drivers/Hardware/H_Tmc2209.h
 roshal\main.o: ../Drivers/Hardware/H_Oled.h
 roshal\main.o: ../Drivers/System/Usart3.h
-roshal\main.o: D:\keil_v5\Core\ARM\ARMCC\Bin\..\include\stdio.h
+roshal\main.o: ..\Drivers\Function\Move.h
+roshal\main.o: ..\Drivers\Function\Conversation.h
