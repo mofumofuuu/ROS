@@ -14,6 +14,9 @@ int8_t RL_speed,RR_speed;		//真实速度范围-40-40
 uint32_t RL_step,RR_step;		//真实步数
 float Rangle;								//当前角度
 
+uint8_t SL_speed,SR_speed;
+uint8_t S_speed,S_angle;
+
 //发送数据
 void Hx_Send(){
 	Usart2_SendData(&headline,1);//发送包头
@@ -58,10 +61,30 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 				state2=1;
 			}
 		}else if(state2==1){//接收数据
-			
+			switch(rx3_index){
+				case 0:
+					SL_speed=temprx2;
+					rx3_index++;
+					break;
+				case 1:
+					SR_speed=temprx2;
+					rx3_index++;
+					break;
+				case 2:
+					S_speed=temprx2;
+					rx3_index++;
+					break;
+				case 3:
+					S_angle=temprx2;
+					rx3_index=0;
+					state2=2;
+					break;
+			}
 			
 		}else{
-			
+			if(temprx2==0xfe){
+				state2=0;
+			}
 		}
 			
 		HAL_UART_Receive_IT(&huart2,&temprx2,1);
